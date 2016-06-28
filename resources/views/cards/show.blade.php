@@ -15,10 +15,11 @@
             </ul>
 
             <hr>
-            <h3>Add a New Note</h3>
+            <h4>Add a New Note</h4>
             <form method="POST" action="/cards/{{ $card->id }}/notes">
                 {{ csrf_field() }}
                 <div class="form-group">
+                    <label>Content</label>
                     <textarea name="body" class="form-control">{{ old('body') }}</textarea>
                 </div>
                 <div class="form-group">
