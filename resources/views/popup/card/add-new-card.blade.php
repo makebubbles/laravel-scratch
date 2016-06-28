@@ -1,4 +1,4 @@
-<div id="addNewCard" class="modal fade" tabindex="-1" role="dialog">
+<div id="addNewCard" class="modal fade" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
         <div class="modal-header">
@@ -10,7 +10,7 @@
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label for="exampleInputEmail1">Title</label>
-                    <input type="text" class="form-control" name="title" placeholder="Card title">
+                    <input type="text" class="form-control" name="title" placeholder="Card title" autofocus/>
                 </div>
             </form>
         </div>
