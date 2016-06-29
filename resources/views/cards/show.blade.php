@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-6">
             <h1>{{ $card->title }}</h1>
 
             <ul class="list-group">
@@ -13,35 +13,19 @@
                 </li>
             @endforeach
             </ul>
-            
+
             <hr>
-            <h3>Add a New Note</h3>
+            <h4>Add a New Note</h4>
             <form method="POST" action="/cards/{{ $card->id }}/notes">
                 {{ csrf_field() }}
                 <div class="form-group">
+                    <label>Content</label>
                     <textarea name="body" class="form-control">{{ old('body') }}</textarea>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">Add Note</button>
                 </div>
             </form>
-            
-            @if(count($errors))
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="bs-component">
-                        <div class="alert alert-dismissible alert-danger">
-                            <button type="button" class="close" data-dismiss="alert">×</button>
-
-                            @foreach($errors->all() as $error)
-                                {{ $error }}
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-            </div>
-            @endif
-            
         </div>
     </div>
 @stop

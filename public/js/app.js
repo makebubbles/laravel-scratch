@@ -1,3 +1,4 @@
+
 $(document).ready( function(){
 
 });
@@ -6,3 +7,8 @@ $(document).ready( function(){
 if( $('.alert').length > 0 ){
 	$('.alert').delay(1500).fadeOut();
 }
+
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+})
+
