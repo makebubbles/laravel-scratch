@@ -7,14 +7,33 @@
         add new card
     </a>
 
-    @foreach ($cards as $card)
-    <div>
-        <a href="/cards/{{ $card->id }}"> <!-- data-toggle="tooltip" data-placement="right" title="Tooltip on right" -->
-            {{ $card->title }}
-            <span class="badge">{{ $card->notes->count() }}</span>
-        </a>
-    </div>
-    @endforeach
+    <table class="table-striped table-hover table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Created at</th>
+                <th>Updated at</th>
+                <th>Notes</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($cards as $card)
+            <tr>
+                <td>
+                    <a href="/cards/{{ $card->id }}"> <!-- data-toggle="tooltip" data-placement="right" title="Tooltip on right" -->
+                        {{ $card->title }}
+                    </a>
+                </td>
+                <td></td>
+                <td></td>
+                <td>{{ $card->notes->count() }}</td>
+                <td></td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+    
 
     @include('popup.card.add-new-card')
 @stop
