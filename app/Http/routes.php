@@ -1,6 +1,8 @@
 <?php
 
-
+Route::get('/', function() {
+	return view('welcome');
+});
 
 Route::group(['middlewareGroup' => ['web']], function () {
     Route::get('/cards', 'CardsController@index');

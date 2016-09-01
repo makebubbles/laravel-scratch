@@ -1,1 +1,1 @@
-a:hover{text-decoration:none}button:focus{outline:none !important}.message-wrapper{position:absolute;top:15px;right:15px}
+a:focus,a:hover{text-decoration:none;outline:none}button:focus{outline:none !important}.message-wrapper{position:absolute;top:15px;right:15px}
